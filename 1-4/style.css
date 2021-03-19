@@ -1,0 +1,175 @@
+@charset 'utf-8';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width:767px){
+body{
+    height: 450px;
+    width: 400px;
+}
+
+header div{
+    height: 100px;
+    background-color: #141f40;
+}
+
+.left{
+    width: 150px;
+    height: 250px;
+    background-color: #80bfa8;
+    float: left;
+}
+
+.right{
+    width: 100px;
+    height: 150px;
+    background-color: #ff9e6b;
+    float: right; 
+}
+
+.centertop{
+    width: 150px;
+    height: 50px;
+    background-color: #dbd400;
+    float: right;
+}
+
+
+.center{
+    width: 150px;
+    height: 100px;
+    background-color: #0093b7;
+    float: right;
+}
+
+.bottom{
+    width: 250px;
+    height: 100px;
+    background-color: #8c2727;
+    float: right;
+}
+
+footer div{
+    width: 400px;
+    height: 100px;
+    background-color: #d98d30;
+    clear: both;
+}
+}
+
+
+@media screen and (max-width: 767px) {
+    body{
+        height: 450px;
+        width: 300px;
+    }
+    
+    header div{
+        height: 100px;
+        background-color: #141f40;
+    }
+    
+    .left{
+        width: 100px;
+        height: 250px;
+        background-color: #80bfa8;
+        float: left;
+    }
+    
+    .right{
+        width: 75px;
+        height: 150px;
+        background-color: #ff9e6b;
+        float: right; 
+    }
+    
+    .centertop{
+        width: 125px;
+        height: 50px;
+        background-color: #dbd400;
+        float: right;
+    }
+    
+    
+    .center{
+        width: 125px;
+        height: 100px;
+        background-color: #0093b7;
+        float: right;
+    }
+    
+    .bottom{
+        width: 200px;
+        height: 100px;
+        background-color: #8c2727;
+        float: right;
+    }
+    
+    footer div{
+        width: 300px;
+        height: 100px;
+        background-color: #d98d30;
+        clear: both;
+    }
+}
+
+
+@media screen and (max-width: 479px){
+    body{
+        height: auto;
+        width: 150px;
+    }
+    
+    header div{
+        height: 100px;
+        width: 150px;
+        background-color: #141f40;
+    }
+    
+    .left{
+        width: 150px;
+        height: 250px;
+        background-color: #80bfa8;
+        
+    }
+    
+    .right{
+        width: 150px;
+        height: 150px;
+        background-color: #ff9e6b;
+    
+    }
+    
+    .centertop{
+        width: 150px;
+        height: 50px;
+        background-color: #dbd400;
+        
+    }
+    
+    
+    .center{
+        width: 150px;
+        height: 100px;
+        background-color: #0093b7;
+        
+    }
+    
+    .bottom{
+        width: 150px;
+        height: 100px;
+        background-color: #8c2727;
+        
+    }
+    
+    footer div{
+        width: 150px;
+        height: 100px;
+        background-color: #d98d30;
+        
+    }
+}
+
