@@ -1,0 +1,55 @@
+@media screen and (max-width: 479px){
+    body{
+        /* height: auto; */
+        width: 150px;
+    }
+    
+    header div{
+        height: 100px;
+        width: 150px;
+        background-color: #141f40;
+    }
+    
+    .left{
+        width: 150px;
+        height: 100px;
+        background-color: #80bfa8;
+        
+    }
+    
+    .right{
+        width: 150px;
+        height: 100px;
+        background-color: #ff9e6b;
+    
+    }
+    
+    .centertop{
+        width: 150px;
+        height: 50px;
+        background-color: #dbd400;
+        
+    }
+    
+    
+    .center{
+        width: 150px;
+        height: 100px;
+        background-color: #0093b7;
+        
+    }
+    
+    .bottom{
+        width: 150px;
+        height: 100px;
+        background-color: #8c2727;
+        
+    }
+    
+    footer div{
+        width: 150px;
+        height: 100px;
+        background-color: #d98d30;
+        
+    }
+}
