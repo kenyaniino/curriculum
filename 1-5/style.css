@@ -5,8 +5,11 @@
     padding: 0;
 }
 
-@media screen and (min-width: 479px){
-
+.clearfix::after{
+    display: block;
+    content: '';
+    clear: both;
+}
 
 body{
     height: 450px;
@@ -130,137 +133,10 @@ footer div{
     background-color: #d98d30;
     width: 400px;
     height: 100px;
-    clear: both;
+     /* clear: both;  */
 }
-}
 
 
 
 
-@media screen and (max-width: 479px){
-    body{
-        width: 200px;
-        height: auto;
-    }
-    
-    .big-a{
-        background-color: #141f40;
-        height: 200px;
-        width: 200px;
-        position: relative;
-    }
-    
-    .medium-1{
-        background-color: #fff;
-        height: 160px;
-        width: 60px;
-        position: absolute;
-        top: 20px;
-        left: 70px;
-        position: relative;
-    }
-    
-    .small-1{
-        background-color: #a9004b;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-    }
-    
-    .small-2{
-        background-color: #a9004b;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 60px;
-        left: 10px;
-    }
-    
-    .small-3{
-        background-color: #a9004b;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: 110px;
-        left: 10px;
-    }
-    
-    .left{
-        background-color: #80bfa8;
-        height: 100px;
-        width: 200px;
-        
-    }
-    
-    .right{
-        background-color: #8c2727;
-        height: 210px;
-        width: 200px;
-        
-        position: relative;
-    }
-    
-    .medium-a{
-        background-color: #fff;
-        width: 140px;
-        height: 50px;
-        position: absolute;
-        top: 20px;
-        left: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .medium-b{
-        background-color: #fff;
-        width: 140px;
-        height: 50px;
-        position: absolute;
-        top: 80px;
-        left: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .medium-c{
-        background-color: #fff;
-        width: 140px;
-        height: 50px;
-        position: absolute;
-        top: 140px;
-        left: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .small-a{
-        background-color: #ff863f;
-        width: 130px;
-        height: 40px;
-    }
-    
-    .small-b{
-        background-color: #ff863f;
-        width: 130px;
-        height: 40px;
-    }
-    
-    .small-c{
-        background-color: #ff863f;
-        width: 130px;
-        height: 40px;
-    }
-    
-    footer div{
-        background-color: #d98d30;
-        width: 200px;
-        height: 100px;
-        
-    }
 
-}
