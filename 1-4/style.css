@@ -119,7 +119,7 @@ footer div{
 
 @media screen and (max-width: 479px){
     body{
-        height: auto;
+        /* height: auto; */
         width: 150px;
     }
     
