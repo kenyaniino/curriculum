@@ -1,17 +1,72 @@
-<html>
-<p> I say that <?php echo "hello world";?> </p> 
-</html>
+<?php
+
+$sun = 0;
+while($sun < 10){
+    echo $sun."<br>";
+    $sun++;
+}
+?>
 
 <?php
-echo "1.開発環境・検証環境・本番環境"."<br>";
-echo "開発環境→プログラミングする人が使う「作業場所」
-      検証環境→本番そっくりな環境でちゃんと動くか確認するところ
-      本番環境→公開している場所、ユーザーが見れる場所 "."<br>";
 
-echo "2.基本設計書・詳細設計書"."<br>";
-echo "基本設計書→ソフトウェアの動きを外から見た際にどういう動きをするのかを決めたもの 
-      詳細設計書→基本設計で決められた動きをどうやって実現するか決めたもの"."<br>";
-
-echo "3.Ajax"."<br>";
-echo "JavaScriptとXMLを使って非同期にサーバとの間の通信を行うこと"."<br>";
+for($i=0;$i<10;$i++){
+    echo $i;
+}
 ?>
+
+<?php
+$a = 0;
+while($a < 10){
+    echo $a;
+    $a++;
+    if($a == 5){
+        break;
+    }
+}
+
+?>
+
+<?php
+for($aaa=0;$aaa<10;$aaa++){
+    echo $aaa."<br>";
+}
+?>
+
+<?php
+$countries = ["Japan","America","China","Korea"];
+echo $countries[0];
+echo $countries[1];
+echo $countries[2];
+echo $countries[3];
+var_dump($countries);
+echo "<br>";
+?>
+
+<?php
+$fruits = ["りんご","みかん","ぶどう"];
+$fruits[3] = "もも";
+echo $fruits[0];
+echo'<br>';
+echo $fruits[1];
+echo'<br>';
+echo $fruits[2];
+echo'<br>';
+var_dump($fruits);
+echo'<br>';
+
+
+$fruits = ["apple" => "りんご","orange" => "みかん","grape" => "ぶどう"];
+$fruits["peach"] = "もも";
+echo $fruits["apple"];
+echo $fruits["orange"];
+echo $fruits["grape"];
+echo'<br>';
+var_dump($fruits);
+
+?>
+
+
+
+
+
+
