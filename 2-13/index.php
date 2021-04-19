@@ -22,13 +22,15 @@ echo "<br>";
 <!-- 円周率 -->
 <?php
 echo pi();
-function circleArea($r){
+
+function circleArea($r) {
     $circle_area = $r * $r * pi();
     echo $circle_area;
     echo "<br>";
 }
 circleArea(9);
 ?>
+
 
 <!-- 乱数 -->
 <?php
