@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 120px;
+    width: 1000px;
+}
+
+.left{
+    height: 120px;
+    width: 200px;
+    background-color: #add8e6;
+    float: left;
+}
+
+.top{
+    height: 60px;
+    width: 800px;
+    background-color: #87ceeb;
+    float: left;
+    
+}
+
+.buttom{
+    height: 60px;
+    width: 800px;
+    background-color: #00ffff;
+    float: left;
+    
+}
+
+main div{
+height: 250px;
+}
+
+footer div{
+    height: 50px;
+    width: 1000px;
+    background-color: #00ced1;
+}
