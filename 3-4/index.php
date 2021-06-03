@@ -28,12 +28,21 @@ var_dump($posts);//表示させる
         <header>
             <div class="left"><img src="imgs/logo.png" width="180px" height="100px"></div>
             <div class="top">
-            <?php
-            $users = array("id" => "1", "first_name" => "翔伍", "last_name" => "隼田", "last_login" => "2021-05-31 21:54:52");
-            echo $users["id"];
-            echo $users["last_name"];
-            echo $users["first_name"];
-            //var_dump($users);表示させる
+                <?php
+            // $users = array("id" => "1", "first_name" => "翔伍", "last_name" => "隼田", "last_login" => "2021-05-31 21:54:52");
+            // echo $users["id"];
+            // echo $users["last_name"];
+            // echo $users["first_name"];
+
+            foreach($users as $value){
+                echo ($value);//表示させる
+
+             }
+
+            // var_dump($users);
+            // echo $users[0];
+            // echo $users[1];
+            // echo $users[2];
             ?>
             </div>
             <div class="buttom">
