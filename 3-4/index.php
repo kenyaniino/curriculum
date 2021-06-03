@@ -8,7 +8,7 @@ $getData = new getData();
      
 $users = $getData->getUserData();
 $posts = $getData->getPostData();
-
+var_dump($users);
 var_dump($posts);//表示させる
 // 関数db_connect()からPDOを取得する
 // $pdo = db_connect();
@@ -30,14 +30,14 @@ var_dump($posts);//表示させる
             <div class="top">
                 <?php
             // $users = array("id" => "1", "first_name" => "翔伍", "last_name" => "隼田", "last_login" => "2021-05-31 21:54:52");
-            // echo $users["id"];
-            // echo $users["last_name"];
-            // echo $users["first_name"];
+            echo $users["id"];
+            echo $users["last_name"];
+            echo $users["first_name"];
 
-            foreach($users as $value){
-                echo ($value);//表示させる
+            // foreach($users as $value){
+            //     echo ($value);//表示させる
 
-             }
+            //  }
 
             // var_dump($users);
             // echo $users[0];
