@@ -48,7 +48,10 @@ var_dump($posts);//表示させる
             <div class="buttom">
                 <?php
                     echo $users["last_login"];
+        
                 ?>
+        
+        
             </div>
             <div>
 
@@ -57,10 +60,16 @@ var_dump($posts);//表示させる
     </header>
     <main>
         <div>
+       <?php
+        foreach ($posts as $row) {
+            echo $row['id'].$row['title'].$row['category_no'].$row['comment'].$row['created'];
+            echo '<br>';
+        }
+       ?>
         </div>
     </main>
     <footer>
-        <div>
+        <div>Y&I group.inc
         </div>
     </footer>
 </body>
