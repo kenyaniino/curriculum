@@ -8,8 +8,8 @@ $getData = new getData();
      
 $users = $getData->getUserData();
 $posts = $getData->getPostData();
-var_dump($users);
-var_dump($posts);//表示させる
+// var_dump($users);
+// var_dump($posts);//表示させる
 // 関数db_connect()からPDOを取得する
 // $pdo = db_connect();
 ?>
@@ -30,9 +30,11 @@ var_dump($posts);//表示させる
             <div class="top">
                 <?php
             // $users = array("id" => "1", "first_name" => "翔伍", "last_name" => "隼田", "last_login" => "2021-05-31 21:54:52");
-            echo $users["id"];
+            echo "ようこそ";
+            // echo $users["id"];
             echo $users["last_name"];
             echo $users["first_name"];
+            echo "さん";
 
             // foreach($users as $value){
             //     echo ($value);//表示させる
@@ -47,7 +49,7 @@ var_dump($posts);//表示させる
             </div>
             <div class="buttom">
                 <?php
-                    echo $users["last_login"];
+                    echo "最終ログイン日 : ".$users["last_login"];
         
                 ?>
         
@@ -59,14 +61,36 @@ var_dump($posts);//表示させる
         </div>
     </header>
     <main>
-        <div>
+        
+        <table>
+        <tr>
+        <th>記事ID</th>
+        <th>タイトル</th>
+        <th>カテゴリ</th>
+        <th>本文</th>
+        <th>投稿日</th>
+        </tr>
+
+        <?php
+            if ($row['category_no'] == 1){
+
+            }
+        ?>
        <?php
         foreach ($posts as $row) {
-            echo $row['id'].$row['title'].$row['category_no'].$row['comment'].$row['created'];
-            echo '<br>';
-        }
-       ?>
-        </div>
+        ?>
+         <tr>
+            <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['title']; ?></td>
+            <td><?php echo $row['category_no']; ?></td>
+            <td><?php echo $row['comment']; ?></td>
+            <td><?php echo $row['created']; ?></td>
+            <?php echo '<br>'; ?> 
+        </tr>
+            
+      <?php  } ?>
+       </table>
+        
     </main>
     <footer>
         <div>Y&I group.inc

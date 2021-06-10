@@ -31,7 +31,7 @@ header{
     
 }
 
-main div{
+main{
 height: 250px;
 }
 
@@ -39,4 +39,8 @@ footer div{
     height: 50px;
     width: 1000px;
     background-color: #00ced1;
+}
+
+th{
+    background-color: #87ceeb;
 }
