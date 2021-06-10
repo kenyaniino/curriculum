@@ -6,6 +6,7 @@
 header{
     height: 120px;
     width: 1000px;
+    margin: 0 auto;
 }
 
 .left{
@@ -20,6 +21,7 @@ header{
     width: 800px;
     background-color: #87ceeb;
     float: left;
+    text-align: right;
     
 }
 
@@ -28,19 +30,33 @@ header{
     width: 800px;
     background-color: #00ffff;
     float: left;
+    text-align: right;
     
 }
 
-main{
-height: 250px;
-}
 
-footer div{
+
+footer {
     height: 50px;
     width: 1000px;
+    margin: 0 auto;
     background-color: #00ced1;
 }
 
 th{
     background-color: #87ceeb;
+}
+td{
+    background-color: #e0ffff;
+}
+
+table{
+    
+    margin: 10px auto;
+    
+}
+
+p{
+    margin-top: 16px;
+    margin-bottom: 16px;
 }

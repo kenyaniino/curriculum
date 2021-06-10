@@ -28,30 +28,16 @@ $posts = $getData->getPostData();
         <header>
             <div class="left"><img src="imgs/logo.png" width="180px" height="100px"></div>
             <div class="top">
-                <?php
-            // $users = array("id" => "1", "first_name" => "翔伍", "last_name" => "隼田", "last_login" => "2021-05-31 21:54:52");
-            echo "ようこそ";
-            // echo $users["id"];
-            echo $users["last_name"];
-            echo $users["first_name"];
-            echo "さん";
 
-            // foreach($users as $value){
-            //     echo ($value);//表示させる
-
-            //  }
-
-            // var_dump($users);
-            // echo $users[0];
-            // echo $users[1];
-            // echo $users[2];
-            ?>
+            <p><?php echo "ようこそ".$users["last_name"].$users["first_name"] . "さん";?></p>
+            
+            
             </div>
             <div class="buttom">
-                <?php
-                    echo "最終ログイン日 : ".$users["last_login"];
+                
+                    <p><?php echo "最終ログイン日 : ".$users["last_login"]; ?></p>
         
-                ?>
+                
         
         
             </div>
@@ -72,23 +58,27 @@ $posts = $getData->getPostData();
         </tr>
 
         <?php
-            if ($row['category_no'] == 1){
-
-            }
-        ?>
-       <?php
         foreach ($posts as $row) {
-        ?>
+            ?>
          <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['title']; ?></td>
-            <td><?php echo $row['category_no']; ?></td>
+             <td><?php echo $row['id']; ?></td>
+             <td><?php echo $row['title']; ?></td>
+             <td><?php if ($row['category_no'] == 1){
+                 echo "食事";
+             }elseif($row['category_no'] == 2){
+                    echo "旅行";
+             }else{
+                 echo "その他";
+             }
+             ?>
+            </td>
+
             <td><?php echo $row['comment']; ?></td>
             <td><?php echo $row['created']; ?></td>
-            <?php echo '<br>'; ?> 
         </tr>
-            
-      <?php  } ?>
+        
+        <?php  } ?>
+        
        </table>
         
     </main>
