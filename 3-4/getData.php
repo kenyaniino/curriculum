@@ -4,11 +4,11 @@ require_once("pdo.php");
 class getData{
 
     public $pdo;
-    public $data;
+    // public $data;
 
     //コンストラクタ
     function __construct()  {
-        $this->pdo = connect();
+        $this->pdo = connect();//ここでの$thisは６行目の$pdoのこと
     }
 
     /**
@@ -30,8 +30,8 @@ class getData{
      * @return array $post_data 記事情報
      */
     public function getPostData(){
-        $getposts_sql = "SELECT * FROM posts ORDER BY id desc";
-        $post_data = $this->pdo->query($getposts_sql);
+        $getposts_sql = "SELECT * FROM posts ORDER BY id desc";//降順
+        $post_data = $this->pdo->query($getposts_sql);//sql文をデータベースに送る
         return $post_data;
     }
 }

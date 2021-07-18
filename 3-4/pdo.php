@@ -15,7 +15,8 @@
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $pdo;  //return $pdoの結果がfunction connect()に帰ってくる
     } catch (PDOException $e) {
-        echo 'Error:' . $e->getMessage();
+        // echo 'Error:' . $e->getMessage();
+        echo 'Error';
         die();
     }
    }
