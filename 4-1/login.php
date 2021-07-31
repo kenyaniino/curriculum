@@ -1,4 +1,5 @@
 <?php
+// db_connect.phpの読み込み
 require_once('db_connect.php');
 // セッション開始
 session_start();
@@ -21,7 +22,7 @@ if (!empty($_POST)) { //postされたデータが空でない場合
     if (!empty($_POST["name"]) && !empty($_POST["pass"])) {
         //ログイン名とパスワードのエスケープ処理
         $name = htmlspecialchars($_POST['name'], ENT_QUOTES); //htmlエンティティに変換
-        $pass = htmlspecialchars($_POST['pass'], ENT_QUOTES); //htmlエンティティに変換
+        $pass = htmlspecialchars($_POST['pass'], ENT_QUOTES); //htmlエンティティに変換、ENT_QUOTESは特殊文字のうちシングルクォーテーションとダブルクォーテーションも変換対象に含めるようになる
         // ログイン処理開始
         $pdo = db_connect();
         try {
@@ -66,7 +67,7 @@ if (!empty($_POST)) { //postされたデータが空でない場合
     <body>
         <h2>ログイン画面</h2>
         <form method="POST" action="">
-            名前：<input type="text" name="name" size="15"><br><br>
+            名前：<input type="text" name="name" size="15"><br><br><!--sizeは何文字文の大きさかということ -->
              パスワード：<input type="text" name="pass" size="15"><br><br> <!--$passに入る -->
             <input type="submit" value="ログイン">
         </form>

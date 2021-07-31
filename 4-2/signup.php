@@ -55,17 +55,18 @@ $password_hash = password_hash($password, PASSWORD_DEFAULT);//ハッシュアル
 <head>
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <h1>新規登録</h1>
+    <h1>ユーザー登録画面</h1>
     
     <form method="POST" action="">
-        user:<br>
-        <input type="text" name="name" id="name">
+        
+        <input type="text" name="name" id="name" placeholder="ユーザー名">
         <br>
-        password:<br>
-        <input type="password" name="password" id="password"><br>
-        <input type="submit" value="submit" id="signUp" name="signUp">
+        <input type="password" name="password" id="password" placeholder="パスワード">
+        <br>
+        <input class="button" type="submit" value="新規登録" id="signUp" name="signUp">
     </form>
 </body>
 </html>
