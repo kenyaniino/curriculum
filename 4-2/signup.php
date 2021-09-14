@@ -7,7 +7,7 @@ require_once('db_connect.php');
 $name = $_POST['name'];//formタグからPOSTで送られてきた値を$_POSTで受け取る
 $password = $_POST['password'];
 $password_hash = password_hash($password, PASSWORD_DEFAULT);//ハッシュアルゴリズムのデフォルト値
-// $messege = "";
+// $passwordはハッシュ化したい文字列
 // $errorMessage = "";
 ?>
 
@@ -16,7 +16,7 @@ $password_hash = password_hash($password, PASSWORD_DEFAULT);//ハッシュアル
 <?php
 // session_start();
             // POSTで送られたデータがあった場合
-            if (isset($_POST["signUp"])) {   //もしPOSTで送られてきたら、以下の処理を実行する
+            if (isset($_POST["signUp"])) {   //もしPOSTで送られてきてあたいが入っていたら、以下の処理を実行する
                 if (!empty($_POST['name']) && !empty($_POST['password'])){//もしnameとpasswordが空でなければ
                     
 
@@ -36,7 +36,7 @@ $password_hash = password_hash($password, PASSWORD_DEFAULT);//ハッシュアル
                         $stmt->bindParam(':name', $name, PDO::PARAM_STR);//PDO::PARAM_STRは文字列ですという意味
                         $stmt->bindParam(':password', $password, PDO::PARAM_STR);
                         // :passwordにバインドする場合は、$password_hashを使用する
-                        $stmt->bindValue(':password', $password_hash);
+                        $stmt->bindValue(':password', $password_hash);//値をパラメータにバインドする
                         //実行
                         $stmt->execute();
                         

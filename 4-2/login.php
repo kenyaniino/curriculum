@@ -27,6 +27,7 @@ if (!empty($_POST["name"]) && !empty($_POST["pass"])) {
     try {
         //データベースアクセスの処理文章。ログイン名があるか判定
         $sql = "SELECT * FROM users WHERE name = :name";
+        //prepareで実行したいsql文をセット
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':name', $name);
         $stmt->execute();
@@ -36,8 +37,8 @@ if (!empty($_POST["name"]) && !empty($_POST["pass"])) {
     }
 
     // 結果が1行取得できたら
-    if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { //FETCH_ASSOCで、カラムのみ取得
-        // ハッシュ化されたパスワードを判定する定形関数のpassword_verify
+    if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { //fetchでデータを取り出してFETCH_ASSOCで、カラムのみ取得
+        // ハッシュ化されたパスワードを判定する定形関数のpassword_verifyパスワードがハッシュ値に適合するかどうかを調査する
         // 入力された値と引っ張ってきた値が同じか判定しています。
         if (password_verify($pass, $row['password'])) { //$passは、login.phpの画面で入力されたパスワード
             // セッションに値を保存
